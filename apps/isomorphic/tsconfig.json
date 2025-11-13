@@ -15,20 +15,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["src/*"],
       "@public/*": ["public/*"],
       "@shared/*": ["src/app/shared*"],
       "@core/*": ["../../packages/isomorphic-core/src/*"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [{ "name": "next" }]
   },
-  "extends": "typescript-config/nextjs.json",
   "include": [
+    "src",
     "next-env.d.ts",
     "additional.d.ts",
     "**/*.ts",

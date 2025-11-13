@@ -82,6 +82,9 @@ export const routes = {
   podcast: {
     dashboard: '/podcast',
   },
+  event: {
+    calendar: '/event-calendar',
+  },
   mayaCS: {
     dashboard: '/maya-cs',
     config: '/maya-cs/agent-config',
