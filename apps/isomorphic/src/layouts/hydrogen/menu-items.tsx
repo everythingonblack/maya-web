@@ -82,7 +82,7 @@ export const menuItems = [
     dropdownItems: [
       // label end
       {
-        name: 'AI Settings',
+        name: 'Mayagen CS',
         href: '#',
         icon: <PiShoppingCartDuotone />,
         dropdownItems: [
@@ -94,25 +94,46 @@ export const menuItems = [
           {
             name: 'AI Knowledge',
             href: routes.mayaCS.knowledge,
-          }
+          },
+          {
+            name: 'Playground',
+            href: routes.mayaCS.playground,
+            icon: <PiBriefcaseDuotone />,
+          },
+          {
+            name: 'Maya Avatar',
+            href: routes.mayaCS.avatar,
+            icon: <PiClipboardTextDuotone />,
+          },
+        ],
+      },
+      // label end
+      {
+        name: 'Mayagen Marketing',
+        href: '#',
+        icon: <PiShoppingCartDuotone />,
+        dropdownItems: [
+          {
+            name: 'Agent Config',
+            href: routes.mayaCS.config,
+            badge: '',
+          },
+          {
+            name: 'AI Knowledge',
+            href: routes.mayaCS.knowledge,
+          },
+          {
+            name: 'Playground',
+            href: routes.mayaCS.playground,
+            icon: <PiBriefcaseDuotone />,
+          },
+          {
+            name: 'Maya Avatar',
+            href: routes.mayaCS.avatar,
+            icon: <PiClipboardTextDuotone />,
+          },
         ],
       },
     ]
-  },
-
-  {
-    name: 'Reminder Agent',
-    href: routes.mayaCS.reminder,
-    icon: <PiCalendarDuotone />,
-  },
-  {
-    name: 'Playground',
-    href: routes.mayaCS.playground,
-    icon: <PiBriefcaseDuotone />,
-  },
-  {
-    name: 'Maya Avatar',
-    href: routes.mayaCS.avatar,
-    icon: <PiClipboardTextDuotone />,
   },
 ];

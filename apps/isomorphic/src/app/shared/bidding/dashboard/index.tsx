@@ -7,6 +7,7 @@ import LeadingTeams from './leading-teams';
 import PledgesNumber from '@/app/shared/appointment/dashboard/appointment-todo';
 import PopularSellers from './popular-sellers';
 import WelcomeBanner from './welcome-banner';
+import PlatformAccess from '@/app/shared/logistics/dashboard/platform-access';
 import FleetStatus from '@/app/shared/logistics/dashboard/fleet-status';
 
 export default function BiddingDashboard() {
@@ -15,7 +16,7 @@ export default function BiddingDashboard() {
       <div className="col-span-full flex flex-col gap-6 @5xl:col-span-8 3xl:col-span-9">
         <WelcomeBanner />
         <div className="grid grid-cols-1 @3xl:grid-cols-2 gap-4">
-  <FleetStatus className="w-full" />
+  <PlatformAccess className="w-full" />
   <FleetStatus className="w-full" />
 </div>
 
