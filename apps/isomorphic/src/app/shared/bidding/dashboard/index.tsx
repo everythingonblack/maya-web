@@ -2,10 +2,10 @@ import ActiveAuctions from './active-auctions/index';
 import Analytics from './analytics';
 import BiddingActivity from './bidding-activity';
 import FeaturedBid from '@/app/shared/project-dashboard/overall-progress';
-import HotBids from './hot-bids';
+import ResponseRate from '@/app/shared/support/dashboard/response-rate';
 import LeadingTeams from './leading-teams';
 import PledgesNumber from '@/app/shared/appointment/dashboard/appointment-todo';
-import PopularSellers from './popular-sellers';
+import SalesReport from '@/app/shared/ecommerce/dashboard/sales-report';
 import WelcomeBanner from './welcome-banner';
 import FleetStatus from '@/app/shared/logistics/dashboard/fleet-status';
 
@@ -19,9 +19,9 @@ export default function BiddingDashboard() {
   <FleetStatus className="w-full" />
 </div>
 
-        <HotBids />
+        <ResponseRate className="col-span-full @4xl:col-span-6 @6xl:col-span-7" />
         <Analytics />
-        <PopularSellers />
+        <SalesReport className="@4xl:col-span-2 @7xl:col-span-8" />
         <ActiveAuctions />
       </div>
       <div className="col-span-full @container/sidebar @5xl:col-span-4 3xl:col-span-3">
