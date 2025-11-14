@@ -13,7 +13,7 @@ const data = [
   { name: 'Web App:', value: 35, color: '#10b981' },
 ];
 
-export default function FleetStatus({ className }: { className?: string }) {
+export default function PlatformAccess({ className }: { className?: string }) {
   return (
     <div className={cn('flex flex-col gap-5 border-0 p-0 lg:p-0', className)}>
       <div className="grid items-start rounded-lg border border-muted p-5 @xl:grid-cols-2 lg:p-7">
@@ -90,3 +90,4 @@ export default function FleetStatus({ className }: { className?: string }) {
     </div>
   );
 }
+

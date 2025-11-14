@@ -13,6 +13,8 @@ import NextProgress from '@core/components/next-progress';
 // styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'react-calendar/dist/Calendar.css';
+import '@/app/react-big-calendar.css';
 import '@/app/globals.css';
 
 export const metadata = {

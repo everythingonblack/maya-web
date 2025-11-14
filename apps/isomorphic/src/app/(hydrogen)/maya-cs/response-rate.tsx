@@ -98,19 +98,6 @@ export default function ResponseRate({ className }: { className?: string }) {
         </>
       }
       descriptionClassName="text-gray-500 mt-1.5 flex flex-col md:flex-row items-center gap-2"
-      action={
-        <DatePicker
-          selected={startDate}
-          onChange={(date: Date | null) => setStartDate(date!)}
-          dateFormat="yyyy"
-          placeholderText="Select Year"
-          showYearPicker
-          maxDate={new Date()}
-          inputProps={{ variant: 'text', inputClassName: 'p-0 px-1 h-auto' }}
-          popperPlacement="bottom-end"
-          className="w-[100px]"
-        />
-      }
     >
       <div className='custom-scrollbar overflow-x-auto scroll-smooth'>
         <div className="h-96 w-full pt-9">

@@ -48,7 +48,7 @@ const onSubmit = (data: any) => {
   console.log('Form submitted:', data);
 };
 
-export const teams = [
+const teams = [
   {
     name: 'WhatsApp',
     icon: <WhatsappIcon className="h-9 w-9" />,
@@ -259,7 +259,7 @@ export default function IntegrationSettingsView() {
   );
 }
 
-export function PromoBanner({
+function PromoBanner({
   className,
   onClose,
   onActivate,

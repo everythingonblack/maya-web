@@ -8,25 +8,15 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import DropdownAction from '@core/components/charts/dropdown-action';
 import {
   overAllProgressData,
-  overAllProgressViewOptions,
 } from '@/data/project-dashboard';
 
 export default function OverallProgress({ className }: { className?: string }) {
-  const [state, setState] = useState('');
 
   return (
     <WidgetCard
       title="Respon AI"
       headerClassName="items-center"
       className={cn('@container dark:bg-gray-100/50', className)}
-      action={
-        <DropdownAction
-          className="rounded-md border"
-          options={overAllProgressViewOptions}
-          onChange={setState}
-          dropdownClassName="!z-0"
-        />
-      }
     >
       <Box className="relative h-60 w-full translate-y-6 @sm:h-80">
         <ResponsiveContainer width="100%" height="100%">

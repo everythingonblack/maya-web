@@ -127,11 +127,6 @@ export const menuItems = [
             href: routes.mayaCS.playground,
             icon: <PiBriefcaseDuotone />,
           },
-          {
-            name: 'Maya Avatar',
-            href: routes.mayaCS.avatar,
-            icon: <PiClipboardTextDuotone />,
-          },
         ],
       },
     ]

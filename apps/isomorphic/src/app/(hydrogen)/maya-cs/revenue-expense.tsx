@@ -171,7 +171,6 @@ export default function RevenueExpense({ className }: { className?: string }) {
       action={
         <div className="flex items-center justify-between gap-5">
           <Legend className="hidden @2xl:flex @3xl:hidden @5xl:flex" />
-          <DropdownAction options={viewOptions} onChange={handleChange} />
         </div>
       }
       className={className}

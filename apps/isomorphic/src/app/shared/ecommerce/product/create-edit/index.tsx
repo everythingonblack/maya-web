@@ -72,7 +72,11 @@ export default function CreateEditProduct({
 
   return (
     <div className="@container">
-      <FormNav />
+      <FormNav
+        className={cn(
+          layout === LAYOUT_OPTIONS.BERYLLIUM && 'z-[999] 2xl:top-[72px]'
+        )}
+      />
       <FormProvider {...methods}>
         <form
           onSubmit={methods.handleSubmit(onSubmit)}

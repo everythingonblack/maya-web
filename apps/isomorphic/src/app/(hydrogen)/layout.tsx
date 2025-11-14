@@ -3,6 +3,7 @@
 import { useIsMounted } from '@core/hooks/use-is-mounted';
 import HydrogenLayout from '@/layouts/hydrogen/layout';
 import { useLayout } from '@/layouts/use-layout';
+import { SelectedOptionProvider } from '@/hooks/use-selected-option'; // Import the provider
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -20,5 +21,5 @@ function LayoutProvider({ children }: LayoutProps) {
     return null;
   }
 
-  return <HydrogenLayout>{children}</HydrogenLayout>;
+  return <SelectedOptionProvider><HydrogenLayout>{children}</HydrogenLayout></SelectedOptionProvider>; // Wrap with SelectedOptionProvider
 }

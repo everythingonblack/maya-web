@@ -98,18 +98,7 @@ export default function SalesReport({ className }: { className?: string }) {
         </>
       }
       descriptionClassName="text-gray-500 mt-1.5"
-      action={
-        <DatePicker
-          selected={startDate}
-          onChange={(date: Date | null) => setStartDate(date)}
-          dateFormat="yyyy"
-          placeholderText="Select Year"
-          showYearPicker
-          inputProps={{ variant: 'text', inputClassName: 'p-0 px-1 h-auto' }}
-          popperPlacement="bottom-end"
-          className="w-[100px]"
-        />
-      }
+
       className={className}
     >
       <div className='custom-scrollbar overflow-x-auto scroll-smooth'>
