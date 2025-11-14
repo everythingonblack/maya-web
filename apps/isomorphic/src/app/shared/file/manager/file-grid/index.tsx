@@ -8,7 +8,7 @@ import FileGridFilters from '../file-grid-filter';
 
 const tableDataPerPage = 30;
 
-export default function FileGrid() {
+export default function FileGrid({ documents }: { documents: any[] }) {
   const {
     isLoading,
     paginatedData,
@@ -17,7 +17,7 @@ export default function FileGrid() {
     handleDelete,
     handleSearch,
     handleLoadMore,
-  } = useGrid(fileGridData, tableDataPerPage);
+  } = useGrid(documents, tableDataPerPage);
 
   if (isLoading) {
     return (

@@ -9,11 +9,17 @@ import TablePagination from '@core/components/table/pagination';
 import { allFilesColumns } from './columns';
 import FileTableFilters from '../file-table-filters';
 
-export type FileListTableDataType = (typeof allFilesData)[number];
+export type FileListTableDataType = {
+  id: number;
+  doc_filename: string;
+  doc_owner: string;
+  doc_last_modified: string;
+  doc_originalname: string;
+};
 
-export default function FileListTable({ className }: { className?: string }) {
+export default function FileListTable({ className, documents }: { className?: string, documents: FileListTableDataType[] }) {
   const { table, setData } = useTanStackTable<FileListTableDataType>({
-    tableData: allFilesData,
+    tableData: documents,
     columnConfig: allFilesColumns,
     options: {
       initialState: {

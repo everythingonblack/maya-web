@@ -31,7 +31,7 @@ export const allFilesColumns = [
       />
     ),
   }),
-  columnHelper.accessor('file.name', {
+  columnHelper.accessor('doc_filename', {
     id: 'name',
     size: 320,
     header: 'Name',
@@ -43,43 +43,35 @@ export const allFilesColumns = [
           className="size-12 rounded-xl bg-gray-100"
         >
           <Image
-            src={row.original.file.avatar}
+            src={row.original.doc_originalname?.split('.').pop() === 'pdf' ? '/images/file-icons/pdf.svg' : '/images/file-icons/file.svg'}
             className="aspect-square"
             width={26}
             height={26}
-            alt={row.original.file.name}
+            alt={row.original.doc_filename || 'Document'}
           />
         </Flex>
         <Title as="h6" className="mb-0.5 !text-sm font-medium">
-          {row.original.file.name}
+          {row.original.doc_filename || 'Document'}
         </Title>
       </Flex>
     ),
   }),
-  columnHelper.display({
-    id: 'size',
-    size: 130,
-    header: 'Size',
-    cell: ({ row }) => (
-      <span className="text-gray-500">{row.original.size}</span>
-    ),
-  }),
-  columnHelper.accessor('type', {
+  columnHelper.accessor('doc_originalname', {
     id: 'type',
     size: 130,
     header: 'Type',
     enableSorting: false,
     cell: ({ row }) => (
-      <span className="capitalize text-gray-500">{row.original.type}</span>
+      <span className="capitalize text-gray-500">{row.original.doc_originalname?.split('.').pop() || 'Unknown'}</span>
     ),
   }),
-  columnHelper.accessor('modified', {
+  columnHelper.accessor('doc_last_modified', {
     id: 'modified',
     size: 200,
     header: 'Modified',
     cell: ({ row }) => (
       <Text className="mb-1 text-gray-500">
-        {dayjs(row.original.modified).format('DD MMM YYYY')}
+        {dayjs(row.original.doc_last_modified).format('DD MMM YYYY')}
       </Text>
     ),
   }),
@@ -89,18 +81,6 @@ export const allFilesColumns = [
     header: '',
     cell: ({ row }) => (
       <div className="flex items-center justify-start">
-        {row.original.shared.map((img: any, index: number) => {
-          return (
-            <Image
-              key={`file-avatar-${index}`}
-              src={img}
-              width={30}
-              height={30}
-              className="-me-2 aspect-square rounded-full border-2 border-gray-0 dark:border-gray-50"
-              alt="File Avatar"
-            />
-          );
-        })}
       </div>
     ),
   }),
